@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Assignment</title>
+    <meta charset="utf-8">
+    <script type="text/Javascript">
+        function calculate(){
+            var p,r,t;
+            p = prompt("Please enter the principle amount");
+            r = prompt("Please enter the rate");
+            t = prompt("Please enter the time");
+            var cal = (p*r*t)/100;
+            alert("The simple interest is: "+cal);
+        }
+    </script>
+    <script type="text/Javascript">
+        function palindrome(){
+             var x,y;
+             x = document.getElementById("s").value;
+             y = ((x.split('')).reverse()).join('');
+             if(x == y)
+                 alert("Given String is Palindrome");
+             else
+                alert("Given String is not Palindrome");
+        }
+    </script>
+    <script type="text/Javascript">
+        function area(){
+            var a;
+            var ra = document.getElementById("r").value;
+            a = 3.14*ra*ra;
+            alert("The area of circle is: "+a);
+        }
+    </script>
+    <script type="text/Javascript">
+        function copy_object(){
+            var key,obj1,obj2 = {};
+            var n = document.getElementById("m").value;
+            obj1 = n.split(" ");
+            console.log(obj1);
+            for(key in obj1)
+            {
+                console.log(obj1[key]);
+                obj2[key] = obj1[key];
+                console.log(obj2[key]);
+            }
+            console.log(obj2)
+            var k="";
+            for(key in obj2){
+                k = k + obj2[key] + " "
+            }
+            alert("The original object is: "+obj1+"\nThe copied object is "+k);
+
+        }
+    </script>
+    <script type="text/Javascript">
+        function cal(){
+            var employee = [
+                {
+                    name: "Mansi",
+                    age: 22,
+                    salary: 40000,
+                    DOB: "5/11/1996"
+                },
+                {
+                    name: "Manas",
+                    age: 22,
+                    salary: 15000,
+                    DOB: "26/01/1997"
+                },
+                {
+                    name: "Gaurav",
+                    age: 25,
+                    salary: 700,
+                    DOB: "04/10/1994"
+                },
+                {
+                    name: "Pulkit",
+                    age: 20,
+                    salary: 400,
+                    DOB: "19/12/1998"
+                },
+                {
+                    name: "Deepshikha",
+                    age: 25,
+                    salary: 900,
+                    DOB: "01/12/1994"
+                },
+            ]
+            var t = {};
+            for (var key in employee) {
+                if (employee[key].salary > 5000)
+                    console.log("Employee name with salary greater than 5000: " + employee[key].name);
+            }
+            for (var key in employee) {
+                t[employee[key].age] = [];
+            }
+
+            for (var key in employee) {
+                t[employee[key].age].push(employee[key].name);
+            }
+
+            for (var key in employee) {
+                if (employee[key].salary < 1000 && employee[key].age > 20)
+                    employee[key].salary = parseInt(employee[key].salary) * 6;
+            }
+            for (var key in employee) {
+                console.log(employee[key]);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div style="padding-left: 400px">
+        <h1>JAVASCRIPT ASSIGNMENT</h1>
+        <ul>
+            <li><input type="button" value="Calculate Simple Interest" onclick="calculate()"/></li><br>
+            <li>
+                Enter the String: <input type="text" id="s">
+                <input type="button" value="Check palindrome" onclick="palindrome()"/>
+            </li>
+            <br>
+            <li>
+                Enter Radius: <input type="text" id="r">
+                <input type="button" value="Calculate area of circle" onclick="area()"/>
+            </li>
+            <br>
+            <li>
+                Enter the object: <input type="text" id="m">
+                <input type="button" value="Copy object" onclick="copy_object()"/>
+            </li>
+            <br>
+            <li><input type="button" value="Employee" onclick="cal()"/></li><br>
+        </ul>
+    </div>
+</body>
+</html>
