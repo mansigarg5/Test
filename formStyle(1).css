@@ -1,0 +1,106 @@
+body{
+	margin-right: 150px;
+	margin-left: 150px;
+}
+
+#logo{
+	width: 50%;
+	color: #167375;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	display: inline;
+}
+
+header{
+	border-bottom: 2px solid #ddd;
+}
+
+#options{
+	float: right;
+	display: inline;
+	margin-top: 10px;
+	font-size: small;
+	color:#167375;
+}
+
+#options a{
+	margin: 0px 5px;
+	text-decoration: none;
+}
+
+#bug_report{
+	margin-left: 250px;
+	margin-right: 250px;
+	border: 2px solid #ddd;
+	margin-top: 20px;
+	border-radius: 7px;
+}
+
+#form_title{
+	padding: 20px;
+	background: #b0b2b2;
+	color: #fff;
+	margin: 0;
+}
+
+.form_details{
+	padding: 10px 20px;
+}
+
+.form_input{
+	margin-bottom: 10px;
+	border-radius: 4px;
+	width: 100%;
+	border: 2px solid #ddd; 
+}
+
+select{
+	width: 100%;
+	background: #33ffff;
+	border-radius: 4px;
+	border: 2px solid #33ffff;
+	height: 24px;
+	margin-bottom: 10px;
+	color: white;
+	font-weight: 700;
+}
+
+.form_input2{
+	width: 30%;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	border: 2px solid #ddd;
+}
+
+.input_radio{
+	margin-left: 200px;
+}
+
+input[type="radio"]{
+	margin-bottom: 10px;
+}
+
+.input_attachment{
+	width: 79%;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border: 2px solid #ddd;
+}
+
+.input_button{
+	color: white;
+	background: #b3b3b3;
+	border: 2px solid #b3b3b3;
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+}
+#bottom{
+	padding: 10px 20px 10px 0px;
+	text-align: right;
+	background: #D3D3D3;
+
+}
+.input_button2{
+	background: aqua;
+	color: white;
+}
