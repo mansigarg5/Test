@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ques12</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#pa").click(function(e) {
+                $("#pa").css("background","yellow");
+            });
+            $("li").click(function(e) {
+                e.stopPropagation();
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+<div id="pa">
+    This is the div tag.
+    <br>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+</body>
+</html>

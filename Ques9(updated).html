@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ques9</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<select multiple="multiple">
+    <option>Mansi</option>
+    <option selected="selected">Deepshikha</option>
+    <option>Gaurav</option>
+    <option>Pulkit</option>
+    <option>Nandu</option>
+    <option>Manas</option>
+</select>
+<div></div>
+
+<script>
+    $( "select" )
+        .change(function () {
+            var str = "";
+            $( "select option:selected" ).each(function() {
+                str += $( this ).text() + " ";
+            });
+            $( "div" ).text( str );
+        })
+        .change();
+</script>
+
+</body>
+</html>

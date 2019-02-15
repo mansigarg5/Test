@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ques14</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+			integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			crossorigin="anonymous"></script>
+	<script>
+$(document).ready(function(){
+		$('.cell').each(function(i, n) {
+   if($(n).text() > 10)
+   {
+	$(n).css('color', 'red');
+	}
+});
+  });
+
+</script>
+<style type="text/css">
+	td{
+		border: 1px solid black;
+		width: 75px;
+		height: 75px;
+		font-size: large;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td class="cell">20</td>
+			<td class="cell">5</td>
+			<td class="cell">1</td>
+			<td class="cell">3</td>
+			<td class="cell">10</td>
+			<td class="cell">15</td>
+		</tr>
+	</table>
+
+</body>
+</html>
