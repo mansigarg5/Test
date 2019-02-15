@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ques10</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").hover(function()
+            {
+                var a={
+                    val1:"Mansi",
+                    val2:"Deepshikha",
+                    val3:"Pulkit",
+                    val4:"Gaurav"
+                };
+                var s=$("<select/>");
+                for(var val in a)
+                {
+                    $("<option/>",{value: val,text: a[val]}).appendTo(s);
+                }
+                s.appendTo("body");
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+<p>Hover</p>
+</body>
+</html>

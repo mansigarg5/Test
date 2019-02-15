@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ques13</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+			integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			crossorigin="anonymous"></script>
+
+	<script>
+		$('document').ready(function(){
+			  var heights = $('div.div').map(function(){
+			 	return $(this).height();
+			  }).get();
+
+			var maxheight = Math.max.apply(null, heights);
+
+			$('.show').html("Max height: "+maxheight);
+		})
+
+	</script>
+</head>
+<body>
+	<div class="div">
+		L1
+		L2
+	</div>
+	<br>
+	<div class="div">
+		L1<br>
+		L2<br>
+		L3<br>
+		L4<br>
+	</div>
+	<br>
+	<div class="div">
+		L1<br>
+		L2
+	</div>
+	<br>
+
+	<div class="show">
+	</div>
+</body>
+</html>

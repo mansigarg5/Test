@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ques17</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous">
+    </script>
+<script>
+$(function(){	  
+    setInterval(function () {
+        $('#slider').animate({left: 0}, 500, function () {
+            $('#slider img:first-child').appendTo('#slider');
+            $('#slider').css('left', '0');
+    
+        });
+     }, 1000);
+});
+</script>
+<style>
+#slider {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 500px;
+    height: 500px;
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title></title>
+</head>
+<body>
+<div id="slider">
+    <img src="Image1.jpg"></img>
+    <img src="Image2.jpg"></img>
+    <img src="DHONI.jpeg"></img>
+</div>
+</body>
+ </html>
