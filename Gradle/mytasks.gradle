@@ -1,0 +1,3 @@
+task mytask2 {
+    println"Helloo mytask!"
+}
