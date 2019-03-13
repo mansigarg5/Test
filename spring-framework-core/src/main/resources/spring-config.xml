@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id = "database" class="com.spring.demo.Database">
+        <property name="name" value="Mansi"/>
+        <property name="port" value="101"/>
+    </bean>
+
+    <!--<bean id = "tea" class="com.spring.demo.Tea"/>-->
+    <!--<bean id = "expressTea" class="com.spring.demo.ExpressTea"/>-->
+    <!--<bean id="teaRestaurant" class="com.spring.demo.Restaurant">-->
+        <!--<property name="hotDrink" ref="tea"/>-->
+    <!--</bean>-->
+    <!--<bean id="expressTeaRestaurant" class="com.spring.demo.Restaurant">-->
+        <!--<property name="hotDrink">-->
+            <!--<bean class="com.spring.demo.ExpressTea"/>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <bean id="complexBean" class="com.spring.demo.Complex">
+        <property name="list">
+            <list>
+                <value>List1</value>
+                <value>List2</value>
+            </list>
+        </property>
+        <property name="set">
+            <list>
+                <value>Set1</value>
+                <value>Set2</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="One"/>
+                <entry key="2" value="Two"/>
+            </map>
+        </property>
+    </bean>
+
+    <!--<bean id="teaRestaurant" class="com.spring.demo.Restaurant" autowire="byName"/>-->
+    <!--<bean id = "hotDrink" class="com.spring.demo.Tea"/>-->
+    <!--<bean id="teaRestaurant" class="com.spring.demo.Restaurant" autowire="byType" scope="prototype"/>-->
+    <!--<bean id = "hotDrink" class="com.spring.demo.Tea"/>-->
+    <!--<bean id="teaRestaurant" class="com.spring.demo.Restaurant"/>-->
+    <!--<bean id="teaRestaurant" class="com.spring.demo.Restaurant" autowire="constructor"/>-->
+    <!--<bean id = "hotDrink" class="com.spring.demo.Tea"/>-->
+
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.spring.demo"/>
+
+</beans>
