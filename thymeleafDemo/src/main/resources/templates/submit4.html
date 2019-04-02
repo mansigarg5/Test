@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Submit</title>
+</head>
+<body>
+<table class="table table-bordered">
+    <tr>
+    <th>Username</th>
+    <th>Password</th>
+    </tr>
+        <tr th:each="emp : ${empList}">
+            <td th:text="${emp.username}"></td>
+            <td th:text="${emp.password}"></td>
+        </tr>
+</table>
+</body>
+</html>

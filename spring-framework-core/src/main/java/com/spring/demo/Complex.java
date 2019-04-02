@@ -26,6 +26,7 @@ public class Complex {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
         Complex complex = applicationContext.getBean("complexBean",Complex.class);
+        System.out.println(applicationContext.isPrototype("complexBean"));
         System.out.println(complex.list);
         System.out.println(complex.set);
         System.out.println(complex.map);

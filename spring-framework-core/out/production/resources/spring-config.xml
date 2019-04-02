@@ -23,7 +23,7 @@
         <!--</property>-->
     <!--</bean>-->
 
-    <bean id="complexBean" class="com.spring.demo.Complex">
+    <bean id="complexBean" class="com.spring.demo.Complex" scope="prototype">
         <property name="list">
             <list>
                 <value>List1</value>

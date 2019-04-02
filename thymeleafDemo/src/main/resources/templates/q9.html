@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Question9</title>
+</head>
+<body>
+<span th:each="userType:${T(com.example.thymeleafDemo.enums.UserType).values()}">
+    <p th:if="${userType.name()}=='USER' ">Hello User</p>
+    <p th:if="${userType.name()}=='ADMIN' ">Hello Admin</p>
+    <p th:if="${userType.name()}=='SUPER_ADMIN' ">Hello Super admin</p>
+</span>
+<!--<div th:each="userType : ${T(com.example.thymeleafDemo.enums.UserType).values()}"></div>-->
+<!--<select>-->
+    <!--<option th:value="None">Select One</option>-->
+    <!--<option th:each="userType : ${T(com.example.thymeleafDemo.enums.UserType).values()}"-->
+            <!--th:value="${userType.name()}" th:text="${userType.name()}"></option>-->
+<!--</select> -->
+</body>
+</html>
